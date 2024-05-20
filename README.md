@@ -5,11 +5,11 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/559e0e0e-a068-4243-ae4f-910319001b79)
 
 # Prerequisitos:
-* Raspberry Pi 3 Modelo B 4GB o 8GB.
-* Raspberry Pi OS (64-bit).
-* 16GB tarjeta MicroSD.
-* Lector de tarjetas SD USB.
-* Teclado (y ratón opcional) para la configuración inicial de Raspberry.
-* Cable HDMI y monitor para la configuración inicial de Raspberry Pi.
+* Raspberry Pi 3 Modelo B 4GB o 8GB. https://amzn.to/4bKrguB
+* Raspberry Pi OS (64-bit). https://bit.ly/4blBHFa
+* 64GB tarjeta MicroSD. https://amzn.to/3ynPiNz
+* Lector de tarjetas SD USB. https://bit.ly/4bmzhpL
+* Teclado (y ratón opcional) para la configuración inicial de Raspberry. 
+* Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://bit.ly/44WdC5t
 
 Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi 2 v1.2 y superiores, y hay herramientas de Windows / Linux para manejar la gestión de la tarjeta SD.
