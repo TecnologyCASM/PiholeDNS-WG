@@ -5,7 +5,7 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/559e0e0e-a068-4243-ae4f-910319001b79)
 
 # Prerequisitos:
-* Raspberry Pi 3 Modelo B 4GB o 8GB. https://www.amazon.com/Vilros-Raspberry-Kit-inicio-completo/dp/B07VD9JR2H/ref=sr_1_2_sspa?crid=1VPQDACDM5528&dib=eyJ2IjoiMSJ9.mP4drOfyakW9P2E6ytjWi1Dw0PQxL-Sc1CRzWf-ayOfPngqMkFYuZZ8iGwFUXcYj1NWbOnpGUQ-qBtp-oQK_IsMnbpgOX3wGj91dP8c2C0z3z-K_FWKa16SLI3_fVx1zkWOoMd2GUKJ6OtS9tyyJvVpCXOmRShPlMfrn3qEPFlQSno9o5mbCihGOjbpMZCoTyLIVb2Pvm6XNFqR7daYBkit1n4dT8VvffejvDzUmJ18.e-W8cnluY3VdFUz7BwyvCro1NkFkJ5_niLTRtAGu8Xs&dib_tag=se&keywords=raspberry%2Bpi%2B4%2Bmodel%2Bb&qid=1716176020&sprefix=Raspberry%2BPi%2B4%2B%2Caps%2C142&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1
+* Raspberry Pi 3 Modelo B 4GB o 8GB.
 * Raspberry Pi OS (64-bit).
 * 16GB tarjeta MicroSD.
 * Lector de tarjetas SD USB.
