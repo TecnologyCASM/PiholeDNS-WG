@@ -16,7 +16,7 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi 2 v1
 # Instalacion de Sistema Operativo en Raspberry Pi:
 1) Descarga la aplicacion "[RaspberryOS](https://www.raspberrypi.com/software/)" de la pagina oficial.
 2) Conecta a la PC el lector SD con la memoria micro y segue los pasos como se muestra en la imagen mas abajo.
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/f28e17ae-d6bf-4b63-88ac-2db724433d69)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/4173438b-eca6-497a-85d0-ec96bf698629)
 3) Elige el sistema operativo recomendado por raspberry.
 4) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
 5) Despues de agorar el paso #4, proceder con la actualizazcion del sistema operativo.
