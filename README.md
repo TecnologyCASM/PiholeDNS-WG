@@ -26,4 +26,5 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 10) Una vez ejecutado este comando, tendra los contenedores PiHoleUnbound y WireGuard listos.
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
-MUCHAS GRACIAS POR VER MI APORTE A LA COMUNIDAD...
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/fcbcef13-ba01-48dc-a901-03b6437deb97)
+MUCHAS GRACIAS POR UTILIZAR MI APORTE A LA COMUNIDAD...
