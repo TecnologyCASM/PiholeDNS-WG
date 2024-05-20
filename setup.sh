@@ -29,6 +29,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 
 # TecnologyCASM/PiHoleUnbound
 git clone https://github.com/TecnologyCASM/PiHoleUnbound.git && 
-	cd LabCASM/ && 
+	cd Docker-Container/PiHoleUnbound/ && 
 	ls -l
 	&& docker-compose up
