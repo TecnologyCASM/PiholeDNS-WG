@@ -20,7 +20,7 @@ services:
     environment:
       - FTLCONF_LOCAL_IPV4=10.7.1.10
       - TZ=America/Santo_Domingo
-      - WEBPASSWORD=Password2024*
+      - WEBPASSWORD=password
       - WEBTHEME=default-dark
       - REV_SERVER=true
       - REV_SERVER_TARGET=10.7.1.1
@@ -49,7 +49,7 @@ services:
     environment:
       - LANG=es
       - WG_HOST=casmvpn.duckdns.org # Dominio Dinamico con IP Publica del ISP.
-      - PASSWORD=Password2024*
+      - PASSWORD=password
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
       - WG_DEFAULT_DNS=10.7.1.10 # Direccion IP Dns PiHole y Unbound DNS.
