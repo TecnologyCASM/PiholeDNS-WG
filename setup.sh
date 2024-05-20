@@ -29,6 +29,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 
 # TecnologyCASM/PiHoleUnbound
 git clone https://github.com/TecnologyCASM/PiHoleUnbound.git && 
-	cd Docker-Container/PiHoleUnbound/ && 
-	ls -l
-	&& piholeunbound-wgeasy.yml up -d
+	cd Docker-Container/Portainer/ && portainer.yml up -d && cd .. &&
+ 	cd Docker-Container/PiHoleUnbound/ && piholeunbound-wgeasy.yml up -d
+	docker ps
