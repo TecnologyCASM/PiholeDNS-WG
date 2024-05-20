@@ -9,7 +9,7 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 * Raspberry Pi OS (64-bit). https://bit.ly/4blBHFa
 * 64GB tarjeta MicroSD. https://amzn.to/3ynPiNz
 * Lector de tarjetas SD USB. https://amzn.to/3wGN8bs
-* Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://bit.ly/44WdC5t
+* Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://amzn.to/3V6UjDc
 * Teclado (y ratón opcional) para la configuración inicial de Raspberry.
   
 Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi 2 v1.2 y superiores, y hay herramientas de Windows / Linux para manejar la gestión de la tarjeta SD.
