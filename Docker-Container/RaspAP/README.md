@@ -31,3 +31,4 @@ También es posible realizar alguna configuración adicional mediante el uso de 
 | RASPAP_wlan0_               | /etc/dnsmasq.d/090_wlan0.conf  |
 
 Por Ejemplo, `RASPAP_hostapd_driver` establecería el `driver` valor en `/etc/hostapd/hostapd.conf`
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/8feeb8e3-14f8-4034-b953-038b68b43101)
