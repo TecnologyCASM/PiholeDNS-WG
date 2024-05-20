@@ -8,24 +8,24 @@ services:
   pihole:
     container_name: pihole
     image: mwatz/pihole-unbound-updatelists:latest
-    hostname: pihole
-    domainname: pihole.local
+    hostname: ${HOSTNAME}
+    domainname: ${DOMAIN_NAME}
     ports:
       - 443:443/tcp
       - 53:53/tcp
       - 53:53/udp
-      - PIHOLE_WEBPORT=8080:80/tcp      #Permite el uso de un puerto diferente para acceder a la interfaz web pihole cuando otros contenedores acoplables usan el puerto 80.
+      - ${PIHOLE_WEBPORT:-80}:80/tcp    #Permite el uso de un puerto diferente para acceder a la interfaz web pihole cuando otros contenedores acoplables usan el puerto 80.
       # - 5335:5335/tcp                 #Descomentar para habilitar el acceso independiente en el servidor local.
       # - 22/tcp                        #Descomentar para habilitar SSH.
     environment:
-      - FTLCONF_LOCAL_IPV4=10.7.1.10
-      - TZ=America/Santo_Domingo
-      - WEBPASSWORD=password
-      - WEBTHEME=default-dark
-      - REV_SERVER=true
-      - REV_SERVER_TARGET=10.7.1.1
-      - REV_SERVER_DOMAIN=local
-      - REV_SERVER_CIDR=10.7.1.0/24
+      - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
+      - TZ=${TZ:-UTC}
+      - WEBPASSWORD=${WEBPASSWORD}
+      - WEBTHEME=${WEBTHEME:-default-light}
+      - REV_SERVER=${REV_SERVER:-false}
+      - REV_SERVER_TARGET=${REV_SERVER_TARGET}
+      - REV_SERVER_DOMAIN=${REV_SERVER_DOMAIN}
+      - REV_SERVER_CIDR=${REV_SERVER_CIDR}
       - PIHOLE_DNS_=127.0.0.1#5335
       - DNSSEC="true"
       - DNSMASQ_LISTENING=single
