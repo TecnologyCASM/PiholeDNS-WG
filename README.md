@@ -5,7 +5,7 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/559e0e0e-a068-4243-ae4f-910319001b79)
 
 # Prerequisitos:
-* Raspberry Pi 3 Modelo B 4GB o 8GB. https://amzn.to/3K7diXR
+* Raspberry Pi 3 Modelo B 2GB. https://amzn.to/3K7diXR
 * Raspberry Pi OS (64-bit). https://bit.ly/4blBHFa
 * 64GB tarjeta MicroSD. https://amzn.to/3ynPiNz
 * Lector de tarjetas SD USB. https://amzn.to/3wGN8bs
