@@ -20,6 +20,13 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/3a84ef2b-4204-4585-a62f-6c5adf6b9236)
 5) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
 6) Despues de agorar el paso #4, proceder con la actualizazcion del sistema operativo.
+```shell
+sudo apt update
+```
+Luego:
+```shell
+sudo apt-get upgrade -y
+```
 7) Despues de completar los pasos del 1 al 6, favor de crear una carpeta en el "/home/pi" con el nombre de su eleccion.
 8) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
 9) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", esto sin las comillas, este comando habilitar la caracteristica de ejecucion en el archivo.
