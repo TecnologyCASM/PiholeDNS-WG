@@ -29,7 +29,10 @@ sudo apt-get upgrade -y
 ```
 7) Despues de completar los pasos del 1 al 6, favor de crear una carpeta en el "/home/pi" con el nombre de su eleccion.
 8) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
-9) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", esto sin las comillas, este comando habilitar la caracteristica de ejecucion en el archivo.
+9) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", este comando habilitar la caracteristica de ejecucion en el archivo.
+```shell
+sudo chmod +x setup.sh
+```
 10) Una vez ejecutado este comando, tendra los contenedores PiHoleUnbound y WireGuard listos.
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
