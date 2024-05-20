@@ -13,10 +13,10 @@
 | `WEBPASSWORD` | random | `<Admin password>` | http://pi.hole/admin contraseña. Ejecuta `docker logs pihole \| grep random` para encontrar tu pase aleatorio.
 | `FTLCONF_LOCAL_IPV4` | unset | `<Host's IP>` | Configure la IP LAN de su servidor, utilizada por los modos de bloqueo web y la dirección de enlace lighttpd.
 | `REV_SERVER` | `false` | `<"true"\|"false">` | Habilite el reenvío condicional de DNS para la resolución de nombres de dispositivos |
-| `REV_SERVER_DOMAIN` | unset | Network Domain | If conditional forwarding is enabled, set the domain of the local network router |
-| `REV_SERVER_TARGET` | unset | Router's IP | If conditional forwarding is enabled, set the IP of the local network router |
-| `REV_SERVER_CIDR` | unset | Reverse DNS | If conditional forwarding is enabled, set the reverse DNS zone (e.g. `192.168.0.0/24`) |
-| `WEBTHEME` | `default-light` | `<"default-dark"\|"default-darker"\|"default-light"\|"default-auto"\|"lcars">`| User interface theme to use.
+| `REV_SERVER_DOMAIN` | unset | Dominio de Red | Si el reenvío condicional está habilitado, configure el dominio del enrutador de la red local |
+| `REV_SERVER_TARGET` | unset | IP del enrutador | Si el reenvío condicional está habilitado, configure la IP del enrutador de la red local |
+| `REV_SERVER_CIDR` | unset | Inverso DNS | Si el reenvío condicional está habilitado, configure la zona DNS inversa (e.g. `192.168.0.0/24`) |
+| `WEBTHEME` | `default-light` | `<"default-dark"\|"default-darker"\|"default-light"\|"default-auto"\|"lcars">`| Tema de interfaz de usuario a utilizar.
 
 Ejemplo `.env` archivo en el mismo directorio que su archivo `docker-compose.yaml`:
 
