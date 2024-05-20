@@ -10,7 +10,7 @@ Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica
 * Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://amzn.to/3V6UjDc
 * Teclado (y ratón opcional) para la configuración inicial de Raspberry.
   
-Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi.
+Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La carpeta Docker-Container contiene otros contenedores en caso de querer instalarlos, como son Portainer, Plex y Nextcloud.
 
 # Instalacion de Sistema Operativo en Raspberry Pi:
 1) Descarga la aplicacion "[RaspberryOS](https://www.raspberrypi.com/software/)" de la pagina oficial.
