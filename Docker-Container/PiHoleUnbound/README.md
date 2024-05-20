@@ -21,15 +21,15 @@
 Ejemplo `.env` archivo en el mismo directorio que su archivo `docker-compose.yaml`:
 
 ```
-FTLCONF_LOCAL_IPV4=192.168.1.10
-TZ=America/Los_Angeles
-WEBPASSWORD=QWERTY123456asdfASDF
+FTLCONF_LOCAL_IPV4=10.7.1.10
+TZ=America/Santo_Domingo
+WEBPASSWORD=password
 REV_SERVER=true
 REV_SERVER_DOMAIN=local
-REV_SERVER_TARGET=192.168.1.1
-REV_SERVER_CIDR=192.168.0.0/16
+REV_SERVER_TARGET=10.7.1.1
+REV_SERVER_CIDR=10.7.1.0/16
 HOSTNAME=pihole
 DOMAIN_NAME=pihole.local
-PIHOLE_WEBPORT=80
-WEBTHEME=default-light
+PIHOLE_WEBPORT=8080
+WEBTHEME=default-dark
 ```
