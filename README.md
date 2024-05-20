@@ -8,7 +8,7 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 * Raspberry Pi 3 Modelo B 4GB o 8GB. https://amzn.to/3K7diXR
 * Raspberry Pi OS (64-bit). https://bit.ly/4blBHFa
 * 64GB tarjeta MicroSD. https://amzn.to/3ynPiNz
-* Lector de tarjetas SD USB. https://bit.ly/4bmzhpL
+* Lector de tarjetas SD USB. https://amzn.to/3wGN8bs
 * Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://bit.ly/44WdC5t
 * Teclado (y ratón opcional) para la configuración inicial de Raspberry.
   
