@@ -24,5 +24,6 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 8) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
 9) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", esto sin las comillas, este comando habilitar la caracteristica de ejecucion en el archivo.
 10) Una vez ejecutado este comando, tendra los contenedores PiHoleUnbound y WireGuard listos.
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/b9b364a3-2a96-4b0b-aceb-7a1e9b0c0f2f)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
+MUCHAS GRACIAS POR VER MI APORTE A LA COMUNIDAD...
