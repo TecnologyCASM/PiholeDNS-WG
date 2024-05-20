@@ -9,6 +9,7 @@ Un contenedor acoplable dirigido por la comunidad para RaspAP. Leer el [document
 docker run --name raspap -it -d --privileged --network=host -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cap-add SYS_ADMIN ghcr.io/raspap/raspap-docker:latest
 ```
 Se debe poder acceder a la GUI web en http://localhost de forma predeterminada
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/8feeb8e3-14f8-4034-b953-038b68b43101)
 
 ## Environment Variables
 Varias variables de entorno están disponibles en esta imagen de la ventana acoplable para ayudar en la configuración.
@@ -31,4 +32,4 @@ También es posible realizar alguna configuración adicional mediante el uso de 
 | RASPAP_wlan0_               | /etc/dnsmasq.d/090_wlan0.conf  |
 
 Por Ejemplo, `RASPAP_hostapd_driver` establecería el `driver` valor en `/etc/hostapd/hostapd.conf`
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/8feeb8e3-14f8-4034-b953-038b68b43101)
+
