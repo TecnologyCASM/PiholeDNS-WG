@@ -27,7 +27,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 	sudo chmod +x /usr/local/bin/docker-compose && 
 	sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-# wirehole
+# TecnologyCASM/PiHoleUnbound
 git clone https://github.com/TecnologyCASM/PiHoleUnbound.git && 
+	cd LabCASM/ && 
 	ls -l
 	#&& docker-compose up
