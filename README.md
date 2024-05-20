@@ -16,13 +16,14 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi 2 v1
 # Instalacion de Sistema Operativo en Raspberry Pi:
 1) Descarga la aplicacion "[RaspberryOS](https://www.raspberrypi.com/software/)" de la pagina oficial.
 2) Conecta a la PC el lector SD con la memoria micro y segue los pasos como se muestra en la imagen mas abajo.
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/4173438b-eca6-497a-85d0-ec96bf698629)
 3) Elige el sistema operativo recomendado por raspberry.
-4) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
-5) Despues de agorar el paso #4, proceder con la actualizazcion del sistema operativo.
-6) Despues de completar los pasos del 1 al 6, favor de crear una carpeta en el "/home/pi" con el nombre de su eleccion.
-7) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
-8) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", esto sin las comillas, este comando habilitar la caracteristica de ejecucion en el archivo.
-9) Una vez ejecutado este comando, tendra los contenedores PiHoleUnbound y WireGuard listos.
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/4173438b-eca6-497a-85d0-ec96bf698629)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/f641c025-ed5e-47ed-b2a0-45d3383a5c0e)
+5) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
+6) Despues de agorar el paso #4, proceder con la actualizazcion del sistema operativo.
+7) Despues de completar los pasos del 1 al 6, favor de crear una carpeta en el "/home/pi" con el nombre de su eleccion.
+8) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
+9) Par que este archivo pueda ejecutarse, debe escribir en la ruta donde se encuentra este via el terminal el siguiente comando "chmod +x setup.sh", esto sin las comillas, este comando habilitar la caracteristica de ejecucion en el archivo.
+10) Una vez ejecutado este comando, tendra los contenedores PiHoleUnbound y WireGuard listos.
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/b9b364a3-2a96-4b0b-aceb-7a1e9b0c0f2f)
 
