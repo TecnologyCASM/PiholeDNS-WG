@@ -31,4 +31,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 git clone https://github.com/TecnologyCASM/PiHoleUnbound.git && 
 	cd Docker-Container/PiHoleUnbound/ && 
 	ls -l
-	&& docker-compose up
+	&& piholeunbound-wgeasy.yml up -d
