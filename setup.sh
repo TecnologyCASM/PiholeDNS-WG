@@ -1,31 +1,32 @@
 #!/bin/bash
 
-# Prereqs and docker
+# Presequisitos para instalar docker:
 sudo apt-get update &&
-    sudo apt-get install -yqq \
-        curl \
-        git \
-        apt-transport-https \
-        ca-certificates \
-        gnupg-agent \
-        software-properties-common
+     sudo apt-get install -y \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     software-properties-common \
+     vim \
+     fail2ban \
+     ntfs-3g
 
-# Install Docker repository and keys
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# Instalar firmas GPG del repo de Docker:
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+     sudo apt-key fingerprint 0EBFCD88
+    
+# Agregar repo de Docker:
+echo "deb [arch=armhf] https://download.docker.com/linux/debian \
+     $(lsb_release -cs) stable" | \
+     sudo tee /etc/apt/sources.list.d/docker.list
 
-sudo add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-        $(lsb_release -cs) stable" &&
-    sudo apt-get update &&
-    sudo apt-get install -yqq \
-                docker-ce \
-                docker-ce-cli \
-                containerd.io
+# Instalar Docker:
+sudo apt-get update && 
+     sudo apt-get install -y docker-ce docker-compose
 
-# docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &&
-        sudo chmod +x /usr/local/bin/docker-compose &&
-        sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+# Agregar usuario al grupo docker y desloguearse y volverse a loguear:
+sudo usermod -aG docker ${USER}
 
 # TecnologyCASM/PiHoleUnbound
 git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
