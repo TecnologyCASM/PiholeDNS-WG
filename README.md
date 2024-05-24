@@ -37,7 +37,6 @@ sudo chmod +x setup.sh
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
 # Link to Pi-hole official site https://pi-hole.net/
-# Link to Pi-hole documentation on for getting unbound setup https://docs.pi-hole.net/guides/dns/unbound/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/c0177465-14c0-4fd7-af6a-fc1b355c84af)
 
 # Ling to Wireguard official site https://www.wireguard.com/quickstart/
