@@ -1,10 +1,4 @@
-# Link to Pi-hole official site https://pi-hole.net/
-# Link to Pi-hole documentation on for getting unbound setup https://docs.pi-hole.net/guides/dns/unbound/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/c0177465-14c0-4fd7-af6a-fc1b355c84af)
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/abea8b26-16e6-4af6-92b3-8a8d9f24ba02)
-
 ### Pi-hole environment variables
-
 > Variables y descripciones replicadas del [official pihole container](https://github.com/pi-hole/docker-pi-hole/#environment-variables):
 
 | Variable | Default | Value | Description |
@@ -33,5 +27,3 @@ DOMAIN_NAME=PiHole.local
 PIHOLE_WEBPORT=8080
 WEBTHEME=default-dark
 ```
-# Link to Portainer official site https://www.portainer.io/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/afcc9c35-a15b-4ea3-8fe8-f29f6be312d2)
