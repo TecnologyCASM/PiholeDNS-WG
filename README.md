@@ -25,7 +25,7 @@ sudo apt update
 ```
 Luego:
 ```shell
-sudo apt-get upgrade -y
+sudo apt-get full-upgrade -y
 ```
 7) Despues de completar los pasos del 1 al 6, favor de crear una carpeta en el "/home/pi" con el nombre de su eleccion.
 8) Dentro de la carpeta que habia creado, favor descargar el archivo setup.sh.
