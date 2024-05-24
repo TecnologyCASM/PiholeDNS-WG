@@ -18,17 +18,17 @@ sudo add-apt-repository \
         $(lsb_release -cs) stable" &&
     sudo apt-get update &&
     sudo apt-get install -yqq \
-		docker-ce \
-		docker-ce-cli \
-		containerd.io 
+                docker-ce \
+                docker-ce-cli \
+                containerd.io
 
 # docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && 
-	sudo chmod +x /usr/local/bin/docker-compose && 
-	sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &&
+        sudo chmod +x /usr/local/bin/docker-compose &&
+        sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # TecnologyCASM/PiHoleUnbound
-git clone https://github.com/TecnologyCASM/PiHoleUnbound.git && 
-	cd Docker-Container/Portainer/ && portainer.yml up -d && cd .. &&
- 	cd Docker-Container/PiHoleUnbound/ && piholeunbound-wgeasy.yml up -d
-	docker ps
+git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
+       cd PiHoleUnbound-WG && docker compose up -d &&
+       docker ps
+       
