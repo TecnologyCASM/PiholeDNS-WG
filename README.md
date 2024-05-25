@@ -19,12 +19,9 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/4173438b-eca6-497a-85d0-ec96bf698629)
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/3a84ef2b-4204-4585-a62f-6c5adf6b9236)
 5) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
-6) Despues de agorar el paso #4, proceder con la actualizazcion del sistema operativo.
+6) Despues de agorar el paso #4, proceder a dar nuestros primeros pasos de actualizacion en la raspberry, donde debemos aplicar los siguientes comandos:
 ```shell
 sudo apt update
-```
-Luego:
-```shell
 sudo apt-get full-upgrade -y
 ```
 7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
