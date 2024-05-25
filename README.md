@@ -31,7 +31,6 @@ Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
 7) En este asistente, tendremos que realizar los siguientes ajustes:
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/8d37f356-e074-49a7-bef0-5cc46ccaf44b)
   *  1 "System Options=>Boot/Auto Login=>Desktop Autologin": Opcion utilizada para que la rasperrypi no solicite credenciales al iniciar sesion. (Solo Raspberry Pi Desktop).
   *  2 "Display Options=>VNC Resolutions": Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
   *  3 "Interface Options=>VNC": Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
