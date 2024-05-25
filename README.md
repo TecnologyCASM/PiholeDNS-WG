@@ -1,8 +1,8 @@
 # PiHole-Unbound, WireGuard y Portainer.
-- `PiHole "Ad-Blocking"`.
-- `Unbound "DNS"`.
-- `WireGuard "VPN"`.
-- `Portainer "MGMT Container"`.
+- `PiHole "Ad-Blocking"`
+- `Unbound "DNS"`
+- `WireGuard "VPN"`
+- `Portainer "MGMT Container"`
   
 Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica, utilizando una Raspberry Pi B 8GB con dispositivo, donde contamos con la configuracion de un servicio de bloqueo de anuncios como PiHole, un servicio de transito de DNS como Unbound y un servicio de VPN como WireGuard, proteger las peticiones DNS de todos los dispositivos de la red y proporcionar una solución VPN para cuando cualquiera de estos dispositivos se encuentre fuera de la red y desee aprovechar las ventajas de seguridad (y velocidad) de la red de forma remota.
 
