@@ -31,6 +31,17 @@ Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
 7) En este asistente, tendremos que realizar los siguientes ajustes:
+  *  Expandir por completo el almaceniamiento de la SD de la raspberry. haciendo eleccion de la opcion 6 "Advanced Options=>Expand FileSystem".
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/b6fbc45c-bd1d-4dd9-9b59-a39d9f19fd97)
+
+  *  fafafa
+  *  fafafa
+  *  fafa
+  *  fafa
+  *  fafaf
+  *  faafa
+  *  fafafa
+  *  fafafa
   *  
 8) 
 
