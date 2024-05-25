@@ -78,14 +78,16 @@ sudo reboot
 ```shell
 docker run hello-world
 ```
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/58f35f2b-9c35-4381-8186-8f37298e170a)
+
+5) Una ves validado que el servicio de docker se encuentra funcional, procederemos con la descargar los contenedores mencionados al inicio "PiHole (Ad-Blocking), Unbound DNS y WireGuard VPN", con el siguiente comando:
+```shell
+docker run hello-world
+```
 
 
-5) fafafa
 6) fafa
-14)
-15) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
-8) 
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
+
 
 # Link to Pi-hole official site https://pi-hole.net/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/c0177465-14c0-4fd7-af6a-fc1b355c84af)
