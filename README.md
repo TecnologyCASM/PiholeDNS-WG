@@ -95,7 +95,7 @@ cd PiHoleUnbound-WG && docker compose up -d && docker ps
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/abea8b26-16e6-4af6-92b3-8a8d9f24ba02)
 
 # Link to Portainer official site https://www.portainer.io/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/afcc9c35-a15b-4ea3-8fe8-f29f6be312d2)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/dc9c6986-a497-49c6-a1f5-05eeb92cb2de)
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/e13320c2-c33e-4622-9c80-adff18ed2103)
 
 MUCHAS GRACIAS POR UTILIZAR MI APORTE A LA COMUNIDAD...
