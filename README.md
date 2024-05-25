@@ -47,9 +47,26 @@ Este comando nos llevara a la siguente pantalla:
 ```shell
 sudo nmtui
 ```
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/35b590d2-8eab-44af-9d5b-ab48f9270ff5)
+
+9) En este asistente, estaremos eligiendo la opcion "Modificar una conexion", luego debemos elegir la terjeta de red que dice "Conexion Cableada 1" y presionamos editar:
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/cc2a65fd-be60-46c5-9aec-0b39bc97c184)
+10) Alli aplicamos los ajuste de direccionamiento estatico que sean necesarios, como son:
+  * Direcciones: En esta opcion debemos colocar la IP estatica que debera llevar la raspberry, el cual debe llevar el siguiente formato 192.168.1.10/24.
+  * Puerta de Enlace: En esta opcion debemos colocar la IP de nuestro router de internet, el cual se encuentra en el mismo segmento mensionado mas arriba, por ejemplo 192.168.1.1.
+  * Servidores de DNS: En esta opcion colocamos los DNS de nuestra eleccion, en mi caso coloco los de google 8.8.8.8 y 8.8.4.4.
+  * Busqueda de Dominio: Esto es cuando estamos trabajando con un dominio, por lo que es opcional.
+11)  Una vez apliquemos estos ajustes de "Network" procederemos a reiniciar el equipo:
+```shell
+sudo reboot
+```
 
 
-7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
+    
+12)
+13)
+14)
+15) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
 8) 
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
