@@ -65,6 +65,7 @@ sudo reboot
 ```shell
 sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh
 ```
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/31713a4b-a865-4850-beda-0032ba4bbfc2)
 2) Despues de realizar la descarga e instalacion de docker, procederemos a agregar el usuario que estamos utilizando al grupo docker, cone l siguiente comando:
 ```shell
 sudo usermod -aG docker ${USER}
