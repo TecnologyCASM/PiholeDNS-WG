@@ -73,8 +73,12 @@ sudo usermod -aG docker ${USER}
 ```shell
 sudo reboot
 ```
+4) Una vez la raspberry pi halla iniciado y para validar que el servicio de docker esta instalado, procederemos a descargar un contenedor de prueba llamado "Helo-Wold":
+```shell
+docker run hello-world
+```
 
-4) fafa
+
 5) fafafa
 6) fafa
 14)
