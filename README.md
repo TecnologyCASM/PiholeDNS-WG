@@ -85,6 +85,7 @@ docker run hello-world
 git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
 cd PiHoleUnbound-WG && docker compose up -d && docker ps
 ```
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c2dd5b3e-fca3-453b-bb90-c5497e5c1c90)
 
 
 6) fafa
