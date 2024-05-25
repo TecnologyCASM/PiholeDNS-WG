@@ -137,6 +137,12 @@ docker compose up -d && docker ps
 # Link to `Pi-hole` official site https://pi-hole.net/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/1a9a8316-1ae7-48ed-98c6-8d269191021f)
 
+# 'The Big Blocklist Collection'
+* https://v.firebog.net/hosts/lists.php
+* https://github.com/blocklistproject/Lists
+* https://easylist.to/
+* https://firebog.net/
+
 # Link to `Wireguard` official site https://www.wireguard.com/quickstart/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/abea8b26-16e6-4af6-92b3-8a8d9f24ba02)
 
