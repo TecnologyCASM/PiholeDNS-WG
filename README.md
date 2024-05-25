@@ -7,8 +7,6 @@ Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica
 * `Raspberry Pi 4 Modelo B 2GB`. https://amzn.to/3K7diXR
 * `64GB tarjeta MicroSD`. https://amzn.to/3ynPiNz
 * `Lector de tarjetas SD USB`. https://amzn.to/3wGN8bs
-* `Cable Micro HDMI` y monitor para la configuración inicial de Raspberry Pi. https://amzn.to/3V6UjDc
-* `Teclado` (y ratón opcional) para la configuración inicial de Raspberry.
   
 Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La carpeta Docker-Container contiene otros contenedores en caso de querer instalarlos, como son Portainer, Plex y Nextcloud.
 
