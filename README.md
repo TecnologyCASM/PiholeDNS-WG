@@ -60,11 +60,23 @@ sudo nmtui
 ```shell
 sudo reboot
 ```
+# Proceso de Instalacion de Docker: 
+1) Una vez la raspberry pi halla iniciado, procederemos a aplicar los siguientes comandos:
+```shell
+sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh
+```
+2) Despues de realizar la descarga e instalacion de docker, procederemos a agregar el usuario que estamos utilizando al grupo docker, cone l siguiente comando:
+```shell
+sudo usermod -aG docker ${USER}
+```
+3) una vez aplicado este comando, debe realizar un reinicio de las raspberry pi:
+```shell
+sudo reboot
+```
 
-
-    
-12)
-13)
+4) fafa
+5) fafafa
+6) fafa
 14)
 15) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
 8) 
