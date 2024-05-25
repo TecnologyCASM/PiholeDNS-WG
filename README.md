@@ -96,7 +96,7 @@ sudo nano docker-compose.yml
 ```shell
 sudo nano .env
 ```
-Ejemplo `.env` archivo en el mismo directorio que su archivo `docker-compose.yaml`:
+Ejemplo `.env` archivo en el mismo directorio que su archivo `docker-compose.yml`:
 
 ```
 FTLCONF_LOCAL_IPV4=10.7.1.10
