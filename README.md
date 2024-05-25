@@ -31,20 +31,18 @@ Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
 7) En este asistente, tendremos que realizar los siguientes ajustes:
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/8d37f356-e074-49a7-bef0-5cc46ccaf44b)
   *  1 "System Options=>Boot/Auto Login=>Desktop Autologin": Opcion utilizada para que la rasperrypi no solicite credenciales al iniciar sesion. (Solo Raspberry Pi Desktop).
   *  2 "Display Options=>VNC Resolutions": Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
   *  3 "Interface Options=>VNC": Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
   *  5 "Localisation Options":
-      - Locale: Configuracion del idioma.
-      - Timezona: Configuracion de zona horaria.
-      - Keyboard: Configuracion del Teclado.
-      - WLAN Country: Configuradion de la ciudad para la red wireless.
+      - Locale: Configuracion del idioma. En mi caso es es_DO.UTF-8
+      - Timezona: Configuracion de zona horaria. En mi caso es America/Santo_Domingo
+      - Keyboard: Configuracion del Teclado. Solo elegir para autoreconocimiento.
+      - WLAN Country: Configuradion de la ciudad para la red wireless. En mi caso "DO Dominican Republic"
   *  6 "Advanced Options=>Expand FileSystem": Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
-  *  fafaf
-  *  faafa
-  *  fafafa
-  *  fafafa
-  *  
+
+ Nota: Para que estos ajustes se apliquen debemos presionar "Finish" y este solicitara un reinicio del equipo. 
 8) 
 
 7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
