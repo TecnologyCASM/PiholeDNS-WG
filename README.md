@@ -1,4 +1,4 @@
-# PiHole-Unbound, WireGuard VPN y Portainer.
+# PiHole-Unbound, WireGuard y Portainer.
 - `PiHole "Ad-Blocking"`.
 - `Unbound "DNS"`.
 - `WireGuard "VPN"`.
