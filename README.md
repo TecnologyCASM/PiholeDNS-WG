@@ -27,9 +27,12 @@ sudo apt update && sudo apt-get full-upgrade -y
 ```shell
 sudo raspi-config
 ```
+Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
-
+7) En este asistente, tendremos que realizar los siguientes ajustes:
+  *  
+8) 
 
 7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
 8) 
