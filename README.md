@@ -23,8 +23,13 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 ```shell
 sudo apt update && sudo apt-get full-upgrade -y
 ```
-7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
-8) 
+6) Una vez apliquemos el comando de actualizacion de los repositorios y la actualiacion de OS de la Raspberry Pi, entonces procederemos con los ajustes de algunos parametros en esta, para ello debemos iniciar el siguiente asistente, con el comando:
+```shell
+sudo raspi-config
+```
+7) 
+8) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
+9) 
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
 # Link to Pi-hole official site https://pi-hole.net/
