@@ -4,11 +4,11 @@ Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/559e0e0e-a068-4243-ae4f-910319001b79)
 
 # Prerequisitos:
-* Raspberry Pi 4 Modelo B 2GB. https://amzn.to/3K7diXR
-* 64GB tarjeta MicroSD. https://amzn.to/3ynPiNz
-* Lector de tarjetas SD USB. https://amzn.to/3wGN8bs
-* Cable HDMI y monitor para la configuración inicial de Raspberry Pi. https://amzn.to/3V6UjDc
-* Teclado (y ratón opcional) para la configuración inicial de Raspberry.
+* `Raspberry Pi 4 Modelo B 2GB`. https://amzn.to/3K7diXR
+* `64GB tarjeta MicroSD`. https://amzn.to/3ynPiNz
+* `Lector de tarjetas SD USB`. https://amzn.to/3wGN8bs
+* `Cable Micro HDMI` y monitor para la configuración inicial de Raspberry Pi. https://amzn.to/3V6UjDc
+* `Teclado` (y ratón opcional) para la configuración inicial de Raspberry.
   
 Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La carpeta Docker-Container contiene otros contenedores en caso de querer instalarlos, como son Portainer, Plex y Nextcloud.
 
@@ -35,10 +35,10 @@ Este comando nos llevara a la siguente pantalla:
   *  2 "Display Options=>VNC Resolutions": Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
   *  3 "Interface Options=>VNC": Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
   *  5 "Localisation Options":
-      - Locale: Configuracion del idioma. En mi caso es es_DO.UTF-8
-      - Timezona: Configuracion de zona horaria. En mi caso es America/Santo_Domingo
+      - Locale: Configuracion del idioma. En mi caso es `es_DO.UTF-8`.
+      - Timezona: Configuracion de zona horaria. En mi caso es `America/Santo_Domingo`.
       - Keyboard: Configuracion del Teclado. Solo elegir para autoreconocimiento.
-      - WLAN Country: Configuradion de la ciudad para la red wireless. En mi caso "DO Dominican Republic"
+      - WLAN Country: Configuradion de la ciudad para la red wireless. En mi caso `DO Dominican Republic`.
   *  6 "Advanced Options=>Expand FileSystem": Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
 
  Nota: Para que estos ajustes se apliquen debemos presionar "Finish" y este solicitara un reinicio del equipo.
@@ -52,9 +52,9 @@ sudo nmtui
 9) En este asistente, estaremos eligiendo la opcion "Modificar una conexion", luego debemos elegir la terjeta de red que dice "Conexion Cableada 1" y presionamos editar:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/cc2a65fd-be60-46c5-9aec-0b39bc97c184)
 10) Alli aplicamos los ajuste de direccionamiento estatico que sean necesarios, como son:
-  * Direcciones: En esta opcion debemos colocar la IP estatica que debera llevar la raspberry, el cual debe llevar el siguiente formato 192.168.1.10/24.
-  * Puerta de Enlace: En esta opcion debemos colocar la IP de nuestro router de internet, el cual se encuentra en el mismo segmento mensionado mas arriba, por ejemplo 192.168.1.1.
-  * Servidores de DNS: En esta opcion colocamos los DNS de nuestra eleccion, en mi caso coloco los de google 8.8.8.8 y 8.8.4.4.
+  * Direcciones: En esta opcion debemos colocar la IP estatica que debera llevar la raspberry, el cual debe llevar el siguiente formato `192.168.1.10/24`.
+  * Puerta de Enlace: En esta opcion debemos colocar la IP de nuestro router de internet, el cual se encuentra en el mismo segmento mensionado mas arriba, por ejemplo `192.168.1.1`.
+  * Servidores de DNS: En esta opcion colocamos los DNS de nuestra eleccion, en mi caso coloco los de google `8.8.8.8` y `8.8.4.4`.
   * Busqueda de Dominio: Esto es cuando estamos trabajando con un dominio, por lo que es opcional.
 11)  Una vez apliquemos estos ajustes de "Network" procederemos a reiniciar el equipo:
 ```shell
@@ -74,7 +74,7 @@ sudo usermod -aG docker ${USER}
 ```shell
 sudo reboot
 ```
-4) Una vez la raspberry pi halla iniciado y para validar que el servicio de docker esta instalado, procederemos a descargar un contenedor de prueba llamado "Helo-Wold":
+4) Una vez la raspberry pi halla iniciado y para validar que el servicio de docker esta instalado, procederemos a descargar un contenedor de prueba llamado `Helo-Wold`:
 ```shell
 docker run hello-world
 ```
@@ -85,7 +85,7 @@ docker run hello-world
 ```shell
 git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git
 ```   
-3) Entrar a la carpeta del proyecto llamado "PiHoleUnbound-WG".
+3) Entrar a la carpeta del proyecto llamado `PiHoleUnbound-WG`.
 ```shell
 cd PiHoleUnbound-WG
 ```
