@@ -79,7 +79,7 @@ docker run hello-world
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/58f35f2b-9c35-4381-8186-8f37298e170a)
 
 # Descarga de proyecto y modificacion del mismo:
-1) Ejecutar el siguiente comando para solo descargar el proyecto:
+1) Ejecutar el siguiente comando para solo descargar el proyecto `PiHoleUnbound-WG`:
 ```shell
 git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git
 ```   
@@ -87,7 +87,7 @@ git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git
 ```shell
 cd PiHoleUnbound-WG
 ```
-5) Editar los siguientes archivo a su gusto:
+5) Editar los siguientes archivo a su gusto `docker-compose.yml` y `.env`:
 ```shell
 sudo nano docker-compose.yml
 ```
@@ -129,13 +129,13 @@ docker compose up -d && docker ps
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/8dc58414-60e3-4191-a7fe-bb8f22417102)
 
-# Link to Pi-hole official site https://pi-hole.net/
+# Link to `Pi-hole` official site https://pi-hole.net/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/1a9a8316-1ae7-48ed-98c6-8d269191021f)
 
-# Link to Wireguard official site https://www.wireguard.com/quickstart/
+# Link to `Wireguard` official site https://www.wireguard.com/quickstart/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/abea8b26-16e6-4af6-92b3-8a8d9f24ba02)
 
-# Link to Portainer official site https://www.portainer.io/
+# Link to `Portainer` official site https://www.portainer.io/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/dc9c6986-a497-49c6-a1f5-05eeb92cb2de)
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/e13320c2-c33e-4622-9c80-adff18ed2103)
 
