@@ -41,7 +41,8 @@ Este comando nos llevara a la siguente pantalla:
       - WLAN Country: Configuradion de la ciudad para la red wireless. En mi caso "DO Dominican Republic"
   *  6 "Advanced Options=>Expand FileSystem": Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
 
- Nota: Para que estos ajustes se apliquen debemos presionar "Finish" y este solicitara un reinicio del equipo. 
+ Nota: Para que estos ajustes se apliquen debemos presionar "Finish" y este solicitara un reinicio del equipo.
+ 
 8) una vez la raspberri pi inicie, debemos realizar los ajustes de "Network", ya que estaremos brindando los servicios mencionados, debemos fijar un direccionamiento IP al equipo, donde estaremos ejecutando el siguiente comando, para que nos arroje un asistente:
 ```shell
 sudo nmtui
