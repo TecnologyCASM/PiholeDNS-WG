@@ -21,8 +21,7 @@ Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La 
 5) Una vez instalado el sistema operativo en la raspberry, conecta esta a la red via cable y conecta un monitor para completar las configuraciones iniciales.
 6) Despues de agorar el paso #4, proceder a dar nuestros primeros pasos de actualizacion en la raspberry, donde debemos aplicar los siguientes comandos:
 ```shell
-sudo apt update
-sudo apt-get full-upgrade -y
+sudo apt update && sudo apt-get full-upgrade -y
 ```
 7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
 8) 
