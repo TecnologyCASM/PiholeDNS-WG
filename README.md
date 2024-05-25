@@ -80,14 +80,6 @@ docker run hello-world
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/58f35f2b-9c35-4381-8186-8f37298e170a)
 
-5) Una ves validado que el servicio de docker se encuentra funcional, procederemos con la descargar los contenedores mencionados al inicio "PiHole (Ad-Blocking), Unbound DNS y WireGuard VPN", con el siguiente comando:
-```shell
-git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
-cd PiHoleUnbound-WG && docker compose up -d && docker ps
-```
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c2dd5b3e-fca3-453b-bb90-c5497e5c1c90)
-Nota: Este comando descargara este proyecto, lo ejecutara autimaticamente con las ajustes que este posee, si desea solo descargarlo para luego realizar las modificaciones de lugar en el archivo docker-compose.yml y el archivo .env, debe segior estos pasos:
-
 # Descarga de proyecto y modificacion del mismo:
 1) Ejecutar el siguiente comando para solo descargar el proyecto:
 ```shell
