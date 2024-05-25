@@ -31,32 +31,32 @@ Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
 7) En este asistente, tendremos que realizar los siguientes ajustes:
-  *  1 "System Options=>Boot/Auto Login=>Desktop Autologin": Opcion utilizada para que la rasperrypi no solicite credenciales al iniciar sesion. (Solo Raspberry Pi Desktop).
-  *  2 "Display Options=>VNC Resolutions": Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
-  *  3 "Interface Options=>VNC": Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
-  *  5 "Localisation Options":
+  *  1 `System Options=>Boot/Auto Login=>Desktop Autologin`: Opcion utilizada para que la rasperrypi no solicite credenciales al iniciar sesion. (Solo Raspberry Pi Desktop).
+  *  2 `Display Options=>VNC Resolutions`: Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
+  *  3 `Interface Options=>VNC`: Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
+  *  5 `Localisation Options`:
       - Locale: Configuracion del idioma. En mi caso es `es_DO.UTF-8`.
       - Timezona: Configuracion de zona horaria. En mi caso es `America/Santo_Domingo`.
       - Keyboard: Configuracion del Teclado. Solo elegir para autoreconocimiento.
       - WLAN Country: Configuradion de la ciudad para la red wireless. En mi caso `DO Dominican Republic`.
-  *  6 "Advanced Options=>Expand FileSystem": Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
+  *  6 `Advanced Options=>Expand FileSystem`: Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
 
- Nota: Para que estos ajustes se apliquen debemos presionar "Finish" y este solicitara un reinicio del equipo.
+ Nota: Para que estos ajustes se apliquen debemos presionar `Finish` y este solicitara un reinicio del equipo.
  
-8) una vez la raspberri pi inicie, debemos realizar los ajustes de "Network", ya que estaremos brindando los servicios mencionados, debemos fijar un direccionamiento IP al equipo, donde estaremos ejecutando el siguiente comando, para que nos arroje un asistente:
+8) una vez la raspberri pi inicie, debemos realizar los ajustes de `Network`, ya que estaremos brindando los servicios mencionados, debemos fijar un direccionamiento IP al equipo, donde estaremos ejecutando el siguiente comando, para que nos arroje un asistente:
 ```shell
 sudo nmtui
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/35b590d2-8eab-44af-9d5b-ab48f9270ff5)
 
-9) En este asistente, estaremos eligiendo la opcion "Modificar una conexion", luego debemos elegir la terjeta de red que dice "Conexion Cableada 1" y presionamos editar:
+9) En este asistente, estaremos eligiendo la opcion `Modificar una conexion`, luego debemos elegir la terjeta de red que dice `Conexion Cableada 1` y presionamos editar:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/cc2a65fd-be60-46c5-9aec-0b39bc97c184)
 10) Alli aplicamos los ajuste de direccionamiento estatico que sean necesarios, como son:
   * Direcciones: En esta opcion debemos colocar la IP estatica que debera llevar la raspberry, el cual debe llevar el siguiente formato `192.168.1.10/24`.
   * Puerta de Enlace: En esta opcion debemos colocar la IP de nuestro router de internet, el cual se encuentra en el mismo segmento mensionado mas arriba, por ejemplo `192.168.1.1`.
   * Servidores de DNS: En esta opcion colocamos los DNS de nuestra eleccion, en mi caso coloco los de google `8.8.8.8` y `8.8.4.4`.
   * Busqueda de Dominio: Esto es cuando estamos trabajando con un dominio, por lo que es opcional.
-11)  Una vez apliquemos estos ajustes de "Network" procederemos a reiniciar el equipo:
+11)  Una vez apliquemos estos ajustes de `Network` procederemos a reiniciar el equipo:
 ```shell
 sudo reboot
 ```
