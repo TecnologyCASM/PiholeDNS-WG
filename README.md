@@ -31,13 +31,15 @@ Este comando nos llevara a la siguente pantalla:
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
 
 7) En este asistente, tendremos que realizar los siguientes ajustes:
-  *  Expandir por completo el almaceniamiento de la SD de la raspberry. haciendo eleccion de la opcion 6 "Advanced Options=>Expand FileSystem".
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/b6fbc45c-bd1d-4dd9-9b59-a39d9f19fd97)
-
-  *  fafafa
-  *  fafafa
-  *  fafa
-  *  fafa
+  *  1 "System Options=>Boot/Auto Login=>Desktop Autologin": Opcion utilizada para que la rasperrypi no solicite credenciales al iniciar sesion. (Solo Raspberry Pi Desktop).
+  *  2 "Display Options=>VNC Resolutions": Opcion utilizada para elegir la resolucion de la pantalla de conexion remota a la raspberry pi. (Solo Raspberry Pi Desktop). 
+  *  3 "Interface Options=>VNC": Opcion habilitada para conexion remota por GUI a la raspberry pi. (Solo Raspberry Pi Desktop).
+  *  5 "Localisation Options":
+      - Locale: Configuracion del idioma.
+      - Timezona: Configuracion de zona horaria.
+      - Keyboard: Configuracion del Teclado.
+      - WLAN Country: Configuradion de la ciudad para la red wireless.
+  *  6 "Advanced Options=>Expand FileSystem": Opcion para expandir por completo el almaceniamiento de la SD de la raspberry.
   *  fafaf
   *  faafa
   *  fafafa
