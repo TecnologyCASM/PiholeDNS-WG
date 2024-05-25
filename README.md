@@ -86,7 +86,41 @@ git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
 cd PiHoleUnbound-WG && docker compose up -d && docker ps
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c2dd5b3e-fca3-453b-bb90-c5497e5c1c90)
+Nota: Este comando descargara este proyecto, lo ejecutara autimaticamente con las ajustes que este posee, si desea solo descargarlo para luego realizar las modificaciones de lugar en el archivo docker-compose.yml y el archivo .env, debe segior estos pasos:
 
+# Descarga de proyecto y modificacion del mismo:
+1) Ejecutar el siguiente comando para solo descargar el proyecto:
+```shell
+git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git
+```   
+3) Entrar a la carpeta del proyecto llamado "PiHoleUnbound-WG".
+```shell
+cd PiHoleUnbound-WG
+```
+5) Editar los siguientes archivo a su gusto:
+```shell
+sudo nano docker-compose.yml
+```
+```shell
+sudo nano .env
+```
+Nota: Este ultimo archivo contiene los parametros:
+FTLCONF_LOCAL_IPV4=10.7.1.10
+TZ=America/Santo_Domingo
+WEBPASSWORD=Password2024*
+REV_SERVER=true
+REV_SERVER_DOMAIN=local
+REV_SERVER_TARGET=10.7.1.1
+REV_SERVER_CIDR=10.7.1.0/24
+HOSTNAME=pihole
+DOMAIN_NAME=pihole.local
+PIHOLE_WEBPORT=8080
+WEBTHEME=default-dark
+
+7) Una vez editado los archivos mencionados mas arriba, solo resta ejecutar el sigueinte comando:
+```shell
+docker compose up -d && docker ps
+```
 
 # Link to Pi-hole official site https://pi-hole.net/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/1a9a8316-1ae7-48ed-98c6-8d269191021f)
