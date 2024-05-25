@@ -27,9 +27,12 @@ sudo apt update && sudo apt-get full-upgrade -y
 ```shell
 sudo raspi-config
 ```
-7) 
-8) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
-9) 
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/c138d6d4-2f87-4468-bd1f-2c13102bac31)
+
+
+
+7) Despues de completar los pasos del 1 al 6, pasaremos a los pasos de instalación del docker.
+8) 
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/bc56c6aa-bcd6-4b82-8741-0edf727a3998)
 
 # Link to Pi-hole official site https://pi-hole.net/
