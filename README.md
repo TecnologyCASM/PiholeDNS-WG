@@ -82,7 +82,8 @@ docker run hello-world
 
 5) Una ves validado que el servicio de docker se encuentra funcional, procederemos con la descargar los contenedores mencionados al inicio "PiHole (Ad-Blocking), Unbound DNS y WireGuard VPN", con el siguiente comando:
 ```shell
-git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git && cd PiHoleUnbound-WG && docker compose up -d && docker ps
+git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git &&
+cd PiHoleUnbound-WG && docker compose up -d && docker ps
 ```
 
 
