@@ -62,7 +62,7 @@ Este comando nos llevara a la siguente pantalla:
 sudo apt update && sudo apt-get full-upgrade -y && sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh && sudo usermod -aG docker ${USER}
 
 ```
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/31713a4b-a865-4850-beda-0032ba4bbfc2)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/d0e3a919-3a1b-43a1-9634-244f7b041619)
 
 2) una vez aplicado este comando, debe realizar un reinicio de las raspberry pi:
 ```shell
