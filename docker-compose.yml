@@ -91,9 +91,9 @@ services:
 # ============================================================================= #
   docker-controller-bot:
     environment:
-       - TELEGRAM_TOKEN=7357142099:AAH-QoEr1hlAqIFXO1pK2ZNSZ55oClPkSk8
-       - TELEGRAM_ADMIN=1251187129
-       - CONTAINER_NAME=docker-controller-bot
+       - TELEGRAM_TOKEN='Token'
+       - TELEGRAM_ADMIN='ID'
+       - CONTAINER_NAME=DockerCASM_Bot
        #- TELEGRAM_GROUP=
        - TELEGRAM_THREAD=1
        #- TELEGRAM_NOTIFICATION_CHANNEL=
@@ -106,7 +106,7 @@ services:
        - /var/run/docker.sock:/var/run/docker.sock
        - /etc/localtime:/etc/localtime:ro
     image: dgongut/docker-controller-bot:latest
-    container_name: docker-controller-bot
+    container_name: DockerCASM_Bot
     restart: always
     network_mode: host
     tty: true
