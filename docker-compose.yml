@@ -48,7 +48,7 @@ services:
     environment:
       - LANG=es
       - WG_HOST=casmvpn.duckdns.org # Dominio Dinamico con IP Publica del ISP.
-      - PASSWORD=password
+      - PASSWORD=${WEBPASSWORD}
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
       - WG_DEFAULT_DNS=10.7.1.10 # Direccion IP Dns PiHole y Unbound DNS.
@@ -77,9 +77,7 @@ services:
     security_opt:
       - no-new-privileges:true
     environment:
-      #TZ: "America/Santo_Domingo"
-      - TZ=${TZ:-UTC}
-      - PASSWORD=${WEBPASSWORD}
+      TZ: "America/Santo_Domingo"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
