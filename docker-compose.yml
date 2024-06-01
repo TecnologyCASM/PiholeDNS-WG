@@ -91,11 +91,11 @@ services:
 # ============================================================================= #
   docker-controller-bot:
     image: dgongut/docker-controller-bot:latest
-    container_name: DockerController-BOT
-    hostname: "DockerController-BOT"
+    container_name: DockerCASM_Bot
+    hostname: "DockerCASM_Bot"
     environment:
-      - TELEGRAM_TOKEN=5432984570:AAH5wyL2Lts8fwg-Zi-QIhtdn6NajaCHvBk #Adquirido con BotFather => @BotFather
-      - TELEGRAM_ADMIN=1251187129 #Adquirido con Get ID Bot => @get_id_bot
+      - TELEGRAM_TOKEN="TOKEN" #Adquirido con BotFather => @BotFather
+      - TELEGRAM_ADMIN="ADMIN-ID" #Adquirido con Get ID Bot => @get_id_bot
       - CHECK_UPDATES=1
       - CHECK_UPDATE_EVERY_HOURS=168 # Definir en horas, la verificacion de actualizacion de los contenedores #
       - BUTTON_COLUMNS=2
