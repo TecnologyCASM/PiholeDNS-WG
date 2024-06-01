@@ -78,7 +78,7 @@ docker run hello-world
 ```shell
 git clone https://github.com/TecnologyCASM/PiHoleUnbound-WG.git
 cd PiHoleUnbound-WG
-ls -l
+ls -la
 
 ```   
 2) Editar los siguientes archivo a su gusto `docker-compose.yml` y `.env`:
