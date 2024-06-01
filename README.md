@@ -63,6 +63,7 @@ sudo apt update && sudo apt-get full-upgrade -y && sudo sudo curl -fsSL https://
 
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/d0e3a919-3a1b-43a1-9634-244f7b041619)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/fe007f42-15a7-4ffb-93ea-7a195a2dd786)
 
 2) una vez aplicado este comando, debe realizar un reinicio de las raspberry pi:
 ```shell
