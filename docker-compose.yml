@@ -3,9 +3,10 @@ version: '3.3'
 volumes:
   etc_pihole-unbound:
   etc_pihole_dnsmasq-unbound:
+
 services:
   pihole:
-    container_name: pihole
+    container_name: Pihole-UnboundDNS
     image: mwatz/pihole-unbound-updatelists:latest
     hostname: ${HOSTNAME}
     domainname: ${DOMAIN_NAME}
@@ -34,13 +35,12 @@ services:
     restart: unless-stopped
     networks:
       labnet.io:
-        ipv4_address: 10.7.1.10    
+        ipv4_address: 10.7.1.10
 # ============================================================================= #
-# https://github.com/IAmStoxe/wirehole/issues/43
   wg-easy:
     depends_on: [pihole]
     image: ghcr.io/wg-easy/wg-easy:latest
-    container_name: wg-easy
+    container_name: WireGuard-VPN
     hostname: "WireGuard-VPN"
     cap_add:
       - NET_ADMIN   # Recomendado pero no obligatorio (DHCP necesita NET_ADMIN).
@@ -70,46 +70,47 @@ services:
       labnet.io:
         ipv4_address: 10.7.1.20
 # ============================================================================= #
-   portainer:
-       image: portainer/portainer-ce:latest
-       container_name: Portainer-ADM
-       hostname: "Portainer-ADM"
-       security_opt:
-            - no-new-privileges:true
-       environment:
-           TZ: "America/Santo_Domingo"
-       volumes:
-            - /etc/localtime:/etc/localtime:ro
-            - /var/run/docker.sock:/var/run/docker.sock:ro
-            - ./portainer-data:/data
-       ports:
-            - "9000:9000/tcp" # Puerto TCP Administracion Web.
-       restart: unless-stopped
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: Portainer-ADM
+    hostname: "Portainer-ADM"
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      TZ: "America/Santo_Domingo"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./portainer-data:/data
+    ports:
+      - "9000:9000/tcp" # Puerto TCP Administracion Web.
+    restart: unless-stopped
     networks:
       labnet.io:
         ipv4_address: 10.7.1.30
 # ============================================================================= #
-    docker-controller-bot:
-        environment:
-            - CONTAINER_NAME=DockerController-BOT
-            - TELEGRAM_TOKEN=5432984570:AAH5wyL2Lts8fwg-Zi-QIhtdn6NajaCHvBk #Adquirido con BotFather => @BotFather
-            - TELEGRAM_ADMIN=1251187129 #Adquirido con Get ID Bot => @get_id_bot
-            - CHECK_UPDATES=1
-            - CHECK_UPDATE_EVERY_HOURS=168 # Definir en horas, la verificacion de actualizacion de los contenedores #
-            - BUTTON_COLUMNS=2
-            - LANGUAGE=ES
-            #- TELEGRAM_GROUP=
-            #- TELEGRAM_THREAD=1
-            #- TELEGRAM_NOTIFICATION_CHANNEL=
-            #- EXTENDED_MESSAGES=0
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - /etc/localtime:/etc/localtime:ro
-        image: dgongut/docker-controller-bot:latest
-        container_name: DockerController-BOT
-        restart: always
-        network_mode: host
-        tty: true
+  docker-controller-bot:
+    image: dgongut/docker-controller-bot:latest
+    container_name: DockerController-BOT
+    hostname: "DockerController-BOT"
+    environment:
+      - TELEGRAM_TOKEN=5432984570:AAH5wyL2Lts8fwg-Zi-QIhtdn6NajaCHvBk #Adquirido con BotFather => @BotFather
+      - TELEGRAM_ADMIN=1251187129 #Adquirido con Get ID Bot => @get_id_bot
+      - CHECK_UPDATES=1
+      - CHECK_UPDATE_EVERY_HOURS=168 # Definir en horas, la verificacion de actualizacion de los contenedores #
+      - BUTTON_COLUMNS=2
+      - LANGUAGE=ES
+      #- CONTAINER_NAME=DockerController-BOT
+      #- TELEGRAM_GROUP=
+      #- TELEGRAM_THREAD=1
+      #- TELEGRAM_NOTIFICATION_CHANNEL=
+      #- EXTENDED_MESSAGES=0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    network_mode: host
+    tty: true
 # ============================================================================= #
 networks:
   labnet.io:
