@@ -1,8 +1,9 @@
-# PiHole-Unbound, WireGuard y Portainer.
+# PiHole-Unbound, WireGuard, Portainer y Docker Controller BOT (Telegram).
 - `PiHole "Ad-Blocking"`
 - `Unbound "DNS"`
 - `WireGuard "VPN"`
 - `Portainer "MGMT Container"`
+- `Docker Controller Bot "Bot Telegram"`
   
 Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica, utilizando una Raspberry Pi B 8GB con dispositivo, donde contamos con la configuracion de un servicio de bloqueo de anuncios como PiHole, un servicio de transito de DNS como Unbound y un servicio de VPN como WireGuard, proteger las peticiones DNS de todos los dispositivos de la red y proporcionar una solución VPN para cuando cualquiera de estos dispositivos se encuentre fuera de la red y desee aprovechar las ventajas de seguridad (y velocidad) de la red de forma remota.
 
@@ -138,5 +139,10 @@ docker compose up -d && docker ps
 # Link to `Portainer` official site https://www.portainer.io/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/dc9c6986-a497-49c6-a1f5-05eeb92cb2de)
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/e13320c2-c33e-4622-9c80-adff18ed2103)
+
+# Link to 'Docker Controller Bot':
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/df035d60-2d1a-466c-8ccd-cb2c30bd6b7c)
+
+
 
 MUCHAS GRACIAS POR UTILIZAR MI APORTE A LA COMUNIDAD...
