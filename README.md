@@ -122,7 +122,7 @@ WEBTHEME=default-dark
 ```shell
 docker compose up -d && docker ps
 ```
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/8dc58414-60e3-4191-a7fe-bb8f22417102)
+![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/afc927ee-c040-4208-840c-6cd168a47f78)
 
 # Link to `Pi-hole` official site https://pi-hole.net/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/1a9a8316-1ae7-48ed-98c6-8d269191021f)
