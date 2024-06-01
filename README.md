@@ -139,7 +139,7 @@ docker compose up -d && docker ps
 # Link to `Portainer` official site https://www.portainer.io/
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/dc9c6986-a497-49c6-a1f5-05eeb92cb2de)
 
-# Link to 'Docker Controller Bot':
+# Link to `Docker Controller Bot "Bot Telegram`':
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/df035d60-2d1a-466c-8ccd-cb2c30bd6b7c)
 
 
