@@ -77,7 +77,9 @@ services:
     security_opt:
       - no-new-privileges:true
     environment:
-      TZ: "America/Santo_Domingo"
+      #TZ: "America/Santo_Domingo"
+      - TZ=${TZ:-UTC}
+      - WEBPASSWORD=${WEBPASSWORD}
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
