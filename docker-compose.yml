@@ -12,8 +12,8 @@ services:
     domainname: ${DOMAIN_NAME}
     ports:
       - 443:443/tcp
-      - 53:53/tcp
-      - 53:53/udp
+      - 55:53/tcp
+      - 55:53/udp
       - ${PIHOLE_WEBPORT:-80}:80/tcp    #Permite el uso de un puerto diferente para acceder a la interfaz web pihole cuando otros contenedores acoplables usan el puerto 80.
       # - 5335:5335/tcp                 #Descomentar para habilitar el acceso independiente en el servidor local.
       # - 22/tcp                        #Descomentar para habilitar SSH.
