@@ -59,7 +59,7 @@ Este comando nos llevara a la siguente pantalla:
 # Proceso Actualiacion OS, Instalacion de Docker y agregar usuario a grupo docker: 
 1) Una vez la raspberry pi halla iniciado, procederemos a aplicar los siguientes comandos:
 ```shell
-sudo apt update && sudo apt-get full-upgrade -y && sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh && sudo usermod -aG docker ${USER}
+sudo apt update && sudo apt-get full-upgrade -y && sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh && sudo usermod -aG docker ${USER} && sudo reboot
 
 ```
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/d0e3a919-3a1b-43a1-9634-244f7b041619)
