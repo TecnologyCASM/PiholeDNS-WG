@@ -20,7 +20,7 @@ services:
     environment:
       - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
       - TZ=${TZ:-UTC}
-      - WEBPASSWORD=${WEBPASSWORD}
+      - WEBPASSWORD=${PIHOLE_WEBPASSWORD}
       - WEBTHEME=${WEBTHEME:-default-light}
       - REV_SERVER=${REV_SERVER:-false}
       - REV_SERVER_TARGET=${REV_SERVER_TARGET}
