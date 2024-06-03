@@ -14,7 +14,7 @@ Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica
 * `64GB tarjeta MicroSD`. https://amzn.to/3ynPiNz
 * `Lector de tarjetas SD USB`. https://amzn.to/3wGN8bs
   
-Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi. La carpeta Docker-Container contiene otros contenedores en caso de querer instalarlos, como son Portainer, Plex y Nextcloud.
+Nota: Dicho esto, este proceso debería funcionar en cualquier Raspberry Pi.
 
 # Instalacion de Sistema Operativo en Raspberry Pi:
 1) Descarga la aplicacion "[RaspberryOS](https://www.raspberrypi.com/software/)" de la pagina oficial.
