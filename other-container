@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # Servicio Pi-hole & Unbound
+  pihole-unbound:
+    image: pihole/pihole:latest
+    container_name: PIHOLE-UNBOUND
+    environment:
+      - TZ=${TZ}
+      - ServerIP=${SERVER_IP}
+      - DNSSEC=true
+      - WEBPASSWORD=${PIHOLE_WEBPASSWORD}
+      - DNSMASQ_LISTENING=local
+      - PIHOLE_DNS=${PIHOLE_DNS}
+    volumes:
+      - ${PIHOLE_UNBOUND_CONFIG}:/etc/pihole
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+    restart: unless-stopped
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.6  # Dirección IP estática para Pi-hole & Unbound
+#--------------------------------------------------------------------#
+  # Servicio wg-easy
+  wg-easy:
+    image: weejewel/wg-easy:latest
+    container_name: WG-EASY
+    depends_on:
+      - pihole-unbound
+    environment:
+      - TZ=${TZ}
+      - SERVERURL=${WG_EASY_SERVERURL}
+      - PEERS=${WG_EASY_PEERS}
+      - PEERS_PUBLIC_KEY=${WG_EASY_PEERS_PUBLIC_KEY}
+      - WG_DEFAULT_DNS=${WG_DEFAULT_DNS}  # Dirección IP del contenedor pihole-unbound
+    ports:
+      - "51821:51820/udp"
+    restart: unless-stopped
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.7  # Dirección IP estática para wg-easy
+#--------------------------------------------------------------------#
+  # Servicio Docker Controller Bot
+  docker-controller-bot:
+    image: your_docker_controller_bot_image:latest
+    container_name: DOCKER-CONTROLLER-BOT
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHAT_ID=${CHAT_ID}
+      - TZ=${TZ}
+    restart: unless-stopped
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.8  # Dirección IP estática para Docker Controller Bot
+#--------------------------------------------------------------------#
+  # Servicio Portainer
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: PORTAINER
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.9  # Dirección IP estática para Portainer
+#--------------------------------------------------------------------#
+volumes:
+  portainer_data:
+
+networks:
+  my_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.7.1.0/24
