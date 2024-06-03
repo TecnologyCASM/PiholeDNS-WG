@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 # Servicio Pihole y Unbound DNS en un solo contenedor:
 volumes:
   etc_pihole-unbound:
