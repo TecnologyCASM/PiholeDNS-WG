@@ -70,28 +70,6 @@ services:
       labnet.io:
         ipv4_address: 10.7.1.20
 # ============================================================================= #
-  docker-controller-bot:
-    environment:
-       - TELEGRAM_TOKEN='Token'
-       - TELEGRAM_ADMIN='ID'
-       - CONTAINER_NAME=DockerCASM_Bot
-       #- TELEGRAM_GROUP=
-       - TELEGRAM_THREAD=1
-       #- TELEGRAM_NOTIFICATION_CHANNEL=
-       - CHECK_UPDATES=1
-       - CHECK_UPDATE_EVERY_HOURS=4
-       - BUTTON_COLUMNS=2
-       - LANGUAGE=ES
-       - EXTENDED_MESSAGES=0
-    volumes:
-       - /var/run/docker.sock:/var/run/docker.sock
-       - /etc/localtime:/etc/localtime:ro
-    image: dgongut/docker-controller-bot:latest
-    container_name: DockerCASM_Bot
-    restart: always
-    network_mode: host
-    tty: true
-# ============================================================================= #
 networks:
   labnet.io:
     name: labnet.io
