@@ -2,8 +2,6 @@
 - `PiHole "Ad-Blocking"`
 - `Unbound "DNS"`
 - `WireGuard "VPN"`
-- `Portainer "MGMT Container"`
-- `Docker Controller Bot "Bot Telegram"`
   
 Este proyecto esta diseñado con la finalidad de utilizarse en una red domestica, utilizando una Raspberry Pi B 8GB con dispositivo, donde contamos con la configuracion de un servicio de bloqueo de anuncios como PiHole, un servicio de transito de DNS como Unbound y un servicio de VPN como WireGuard, proteger las peticiones DNS de todos los dispositivos de la red y proporcionar una solución VPN para cuando cualquiera de estos dispositivos se encuentre fuera de la red y desee aprovechar las ventajas de seguridad (y velocidad) de la red de forma remota.
 
@@ -60,7 +58,7 @@ Este comando nos llevara a la siguente pantalla:
 1) Una vez la raspberry pi halla iniciado, procederemos a aplicar los siguientes comandos:
 ```shell
 sudo apt update && sudo apt-get full-upgrade -y &&
-sudo sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh &&
+sudo curl -fsSL https://get.docker.com/ -o get-docker.sh && sudo sh get-docker.sh &&
 sudo usermod -aG docker ${USER} && sudo reboot
 
 ```
@@ -121,26 +119,5 @@ WEBTHEME=default-dark
 ```shell
 docker compose up -d && docker ps
 ```
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/afc927ee-c040-4208-840c-6cd168a47f78)
-
-# Link to `Pi-hole` official site https://pi-hole.net/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/1a9a8316-1ae7-48ed-98c6-8d269191021f)
-
-# `The Big Blocklist Collection`
-* https://v.firebog.net/hosts/lists.php
-* https://github.com/blocklistproject/Lists
-* https://easylist.to/
-* https://firebog.net/
-
-# Link to `Wireguard` official site https://www.wireguard.com/quickstart/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound/assets/107158068/abea8b26-16e6-4af6-92b3-8a8d9f24ba02)
-
-# Link to `Portainer` official site https://www.portainer.io/
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/dc9c6986-a497-49c6-a1f5-05eeb92cb2de)
-
-# Link to `Docker Controller Bot "Bot Telegram`':
-![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/df035d60-2d1a-466c-8ccd-cb2c30bd6b7c)
-
-
 
 MUCHAS GRACIAS POR UTILIZAR MI APORTE A LA COMUNIDAD...
