@@ -1,4 +1,4 @@
-# PiHole-Unbound, WireGuard, Portainer y Docker Controller BOT (Telegram).
+# PiHole-UnboundDNS y WireGuard-VPN.
 - `PiHole "Ad-Blocking"`
 - `Unbound "DNS"`
 - `WireGuard "VPN"`
