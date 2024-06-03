@@ -68,36 +68,6 @@ services:
       my_network:
         ipv4_address: 10.7.1.7  # Dirección IP estática para wg-easy
 #--------------------------------------------------------------------#
-  # Servicio Docker Controller Bot
-  docker-controller-bot:
-    image: your_docker_controller_bot_image:latest
-    container_name: DOCKER-CONTROLLER-BOT
-    environment:
-      - BOT_TOKEN=${BOT_TOKEN}
-      - CHAT_ID=${CHAT_ID}
-      - TZ=${TZ}
-    restart: unless-stopped
-    networks:
-      my_network:
-        ipv4_address: 10.7.1.8  # Dirección IP estática para Docker Controller Bot
-#--------------------------------------------------------------------#
-  # Servicio Portainer
-  portainer:
-    image: portainer/portainer-ce:latest
-    container_name: PORTAINER
-    ports:
-      - "9000:9000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
-    restart: unless-stopped
-    networks:
-      my_network:
-        ipv4_address: 10.7.1.9  # Dirección IP estática para Portainer
-#--------------------------------------------------------------------#
-volumes:
-  portainer_data:
-
 networks:
   my_network:
     driver: bridge
