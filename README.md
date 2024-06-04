@@ -69,10 +69,10 @@ docker run hello-world
 ![image](https://github.com/TecnologyCASM/PiHoleUnbound-WG/assets/107158068/58f35f2b-9c35-4381-8186-8f37298e170a)
 
 # Descarga de proyecto y modificacion del mismo:
-1) Ejecutar el siguiente comando para solo descargar el proyecto `MiHomePUW` y acceder a la carpeta del proyecto:
+1) Ejecutar el siguiente comando para solo descargar el proyecto `HomePiholeDNS-WG` y acceder a la carpeta del proyecto:
 ```shell
-git clone https://github.com/TecnologyCASM/MiHomePUW.git
-cd MiHomePUW
+git clone https://github.com/TecnologyCASM/HomePiholeDNS-WG.git
+cd HomePiholeDNS-WG
 ls -la
 
 ```   
