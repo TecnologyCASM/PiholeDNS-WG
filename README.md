@@ -1,5 +1,5 @@
 # PiHole-UnboundDNS y WireGuard-VPN.
-- `PiHole "Ad-Blocking"`
+- `PiHole "Ad-Block"`
 - `Unbound "DNS"`
 - `WireGuard "VPN"`
   
