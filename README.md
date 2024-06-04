@@ -80,8 +80,8 @@ docker run hello-world
 # Descarga de proyecto y modificacion del mismo:
 1) Ejecutar el siguiente comando para solo descargar el proyecto `HomePiholeDNS-WG` y acceder a la carpeta del proyecto:
 ```shell
-git clone https://github.com/TecnologyCASM/HomePiholeDNS-WG.git
-cd HomePiholeDNS-WG
+git clone https://github.com/TecnologyCASM/PiholeDNS-WG.git
+cd PiholeDNS-WG
 ls -la
 
 ```   
