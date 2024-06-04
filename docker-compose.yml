@@ -46,11 +46,11 @@ services:
       - SYS_MODULE
     environment:
       - LANG=es
-      - WG_HOST=casmvpn.duckdns.org # Dominio Dinamico con IP Publica del ISP.
+      - WG_HOST=${WG_HOST} # Dominio Dinamico con IP Publica del ISP.
       - PASSWORD=${WEBPASSWORD}
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
-      - WG_DEFAULT_DNS=172.17.0.10 # Direccion IP Dns PiHole y Unbound DNS.
+      - WG_DEFAULT_DNS=${WG_DEFAULT_DNS} # Direccion IP Dns PiHole y Unbound DNS.
       - WG_DEFAULT_ADDRESS=192.168.1.x # Rango IP asignacion clientes WireGuard.
       - WG_ALLOWED_IPS=0.0.0.0/0, ::/0  # Rango de Direcciones IP permitidos https://www.procustodibus.com/blog/2021/03/wireguard-allowedips-calculator/.
     volumes:
