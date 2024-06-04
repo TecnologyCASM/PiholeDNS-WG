@@ -26,7 +26,7 @@ services:
       - REV_SERVER_TARGET=${REV_SERVER_TARGET}
       - REV_SERVER_DOMAIN=${REV_SERVER_DOMAIN}
       - REV_SERVER_CIDR=${REV_SERVER_CIDR}
-      - PIHOLE_DNS_=${PIHOLE_DNS_}
+      - PIHOLE_DNS=${PIHOLE_DNS}
       - DNSSEC="true"
       - DNSMASQ_LISTENING=single
     volumes:
