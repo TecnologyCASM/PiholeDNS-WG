@@ -1,5 +1,5 @@
 version: '3.8'
-# Servicio Pihole y Unbound DNS en un solo contenedor:
+# Servicio Pihole y UnboundDNS en un solo contenedor:
 volumes:
   etc_pihole-unbound:
   etc_pihole_dnsmasq-unbound:
@@ -18,7 +18,7 @@ services:
       # - 5335:5335/tcp                 #Descomentar para habilitar el acceso independiente en el servidor local.
       # - 22/tcp                        #Descomentar para habilitar SSH.
     environment:
-      - PIHOLE_IPV4=${PIHOLE_LOCAL_IPV4}
+      - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
       - TZ=${TZ:-UTC}
       - WEBPASSWORD=${WEBPASSWORD}
       - WEBTHEME=${WEBTHEME:-default-light}
@@ -26,7 +26,7 @@ services:
       - REV_SERVER_TARGET=${REV_SERVER_TARGET}
       - REV_SERVER_DOMAIN=${REV_SERVER_DOMAIN}
       - REV_SERVER_CIDR=${REV_SERVER_CIDR}
-      - PIHOLE_DNS=${PIHOLE_DNS}
+      - PIHOLE_DNS_=${PIHOLE_DNS_}
       - DNSSEC="true"
       - DNSMASQ_LISTENING=single
     volumes:
@@ -35,6 +35,7 @@ services:
     restart: unless-stopped
     network_mode: bridge
 # ============================================================================= #
+# Servicio WireGuard VPN:
   wg-easy:
     depends_on: [pihole]
     image: ghcr.io/wg-easy/wg-easy:latest
