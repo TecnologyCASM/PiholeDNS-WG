@@ -1,4 +1,4 @@
-# Servicio Pihole y Unbound DNS en un solo contenedor:
+version: '3.8'
 volumes:
   etc_pihole-unbound:
   etc_pihole_dnsmasq-unbound:
@@ -30,9 +30,7 @@ services:
       - etc_pihole-unbound:/etc/pihole:rw
       - etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
     restart: unless-stopped
-    networks:
-      my_network:
-        ipv4_address: 172.18.0.2 # Dirección IP estática para Pi-hole & Unbound
+    network_mode: bridge
 # ============================================================================= #
   wg-easy:
     depends_on: [pihole]
@@ -57,21 +55,10 @@ services:
       - "51820:51820/udp"   # Puerto UDP del servicio.
       - "51821:51821/tcp"   # Puerto TCP Administracion Web.
     dns:
-      - 172.18.0.3  # Direccion IP WireGuard.
-      - 172.18.0.2  # Direccion IP Pihole-UnboundDNS.
+      - 172.17.0.3  # Direccion IP WireGuard.
+      - 172.17.0.2  # Direccion IP Pihole-UnboundDNS.
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
     restart: unless-stopped
-    networks:
-      my_network:
-        ipv4_address: 172.18.0.3 # Dirección IP estática para wg-easy
-# ============================================================================= #
-networks:
-  my_network:
-    name: PiholeDNS-WG
-    driver: bridge
-    ipam:
-     config:
-        - subnet: 172.18.0.0/16   # Segmento de Red.
-          gateway: 172.18.0.1
+    network_mode: bridge
