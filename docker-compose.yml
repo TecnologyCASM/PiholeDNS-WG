@@ -5,17 +5,15 @@ volumes:
 
 services:
   pihole:
-    container_name: PIHOLEDNS-WG
+    container_name: PIHOLEDNS
     image: mwatz/pihole-unbound-updatelists:latest
     hostname: ${HOSTNAME}
     domainname: ${DOMAIN_NAME}
     ports:
       - 443:443/tcp
-      - 55:53/tcp
-      - 55:53/udp
-      - ${PIHOLE_WEBPORT:-80}:80/tcp    #Permite el uso de un puerto diferente para acceder a la interfaz web pihole cuando otros contenedores acoplables usan el puerto 80.
-      # - 5335:5335/tcp                 #Descomentar para habilitar el acceso independiente en el servidor local.
-      # - 22/tcp                        #Descomentar para habilitar SSH.
+      - 53:53/tcp
+      - 53:53/udp
+      - ${PIHOLE_WEBPORT:-80}:80/tcp #Puerto de Administracion WEB.
     environment:
       - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
       - TZ=${TZ:-UTC}
@@ -32,10 +30,9 @@ services:
       - etc_pihole-unbound:/etc/pihole:rw
       - etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
     restart: unless-stopped
-#    network_mode: bridge
     networks:
       my_network:
-        ipv4_address: 172.18.0.3  # Dirección IP estática para Pi-hole & Unbound
+        ipv4_address: 172.18.0.2 # Dirección IP estática para Pi-hole & Unbound
 # ============================================================================= #
   wg-easy:
     depends_on: [pihole]
@@ -43,17 +40,16 @@ services:
     container_name: WIREGUARD-VPN
     hostname: "WireGuard-VPN"
     cap_add:
-      - NET_ADMIN   # Recomendado pero no obligatorio (DHCP necesita NET_ADMIN).
+      - NET_ADMIN # Recomendado pero no obligatorio (DHCP necesita NET_ADMIN).
       - SYS_MODULE
     environment:
       - LANG=es
-      - WG_HOST=${WG_HOST} # Dominio Dinamico con IP Publica del ISP.
+      - WG_HOST=${WG_HOST} #Dominio Dinamico con IP Publica del ISP.
       - PASSWORD=${WEBPASSWORD}
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
-#      - WG_IPV4=${WG_LOCAL_IPV4}
       - WG_DEFAULT_DNS=${FTLCONF_LOCAL_IPV4} # Direccion IP Dns PiHole y Unbound DNS.
-      - WG_DEFAULT_ADDRESS=192.168.1.x # Rango IP asignacion clientes WireGuard.
+      - WG_DEFAULT_ADDRESS=192.168.0.x # Rango IP asignacion clientes WireGuard.
       - WG_ALLOWED_IPS=0.0.0.0/0, ::/0  # Rango de Direcciones IP permitidos https://www.procustodibus.com/blog/2021/03/wireguard-allowedips-calculator/.
     volumes:
       - ./wireguard:/etc/wireguard
@@ -61,22 +57,21 @@ services:
       - "51820:51820/udp"   # Puerto UDP del servicio.
       - "51821:51821/tcp"   # Puerto TCP Administracion Web.
     dns:
-      - 172.18.0.4  # Direccion IP WireGuard.
-      - 172.18.0.3  # Direccion IP PiHole-UnboundDNS.
+      - 172.18.0.3  # Direccion IP WireGuard.
+      - 172.18.0.2  # Direccion IP Pihole-UnboundDNS.
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
     restart: unless-stopped
-#    network_mode: bridge
     networks:
       my_network:
-        ipv4_address: 172.18.0.4  # Dirección IP estática para wg-easy
-#--------------------------------------------------------------------#
+        ipv4_address: 172.18.0.3 # Dirección IP estática para wg-easy
+# ============================================================================= #
 networks:
   my_network:
-    name: my_network
+    name: PiholeDNS-WG
     driver: bridge
     ipam:
-      config:
-        - subnet: 172.18.0.0/16
+     config:
+        - subnet: 172.18.0.0/16   # Segmento de Red.
           gateway: 172.18.0.1
