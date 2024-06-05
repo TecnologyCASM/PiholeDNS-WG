@@ -6,7 +6,7 @@ volumes:
 
 services:
   pihole:
-    container_name: Pihole-UnboundDNS
+    container_name: PIHOLEDNS-WG
     image: mwatz/pihole-unbound-updatelists:latest
     hostname: ${HOSTNAME}
     domainname: ${DOMAIN_NAME}
@@ -18,9 +18,9 @@ services:
       # - 5335:5335/tcp                 #Descomentar para habilitar el acceso independiente en el servidor local.
       # - 22/tcp                        #Descomentar para habilitar SSH.
     environment:
-      - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
+      - PIHOLE_IPV4=${PIHOLE_LOCAL_IPV4}
       - TZ=${TZ:-UTC}
-      - WEBPASSWORD=${PIHOLE_WEBPASSWORD}
+      - WEBPASSWORD=${WEBPASSWORD}
       - WEBTHEME=${WEBTHEME:-default-light}
       - REV_SERVER=${REV_SERVER:-false}
       - REV_SERVER_TARGET=${REV_SERVER_TARGET}
@@ -34,12 +34,11 @@ services:
       - etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
     restart: unless-stopped
     network_mode: bridge
-        ipv4_address: 172.17.0.10
 # ============================================================================= #
   wg-easy:
     depends_on: [pihole]
     image: ghcr.io/wg-easy/wg-easy:latest
-    container_name: WireGuard-VPN
+    container_name: WIREGUARD-VPN
     hostname: "WireGuard-VPN"
     cap_add:
       - NET_ADMIN   # Recomendado pero no obligatorio (DHCP necesita NET_ADMIN).
@@ -50,6 +49,7 @@ services:
       - PASSWORD=${WEBPASSWORD}
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
+      - WG_IPV4=${WG_LOCAL_IPV4}
       - WG_DEFAULT_DNS=${WG_DEFAULT_DNS} # Direccion IP Dns PiHole y Unbound DNS.
       - WG_DEFAULT_ADDRESS=192.168.1.x # Rango IP asignacion clientes WireGuard.
       - WG_ALLOWED_IPS=0.0.0.0/0, ::/0  # Rango de Direcciones IP permitidos https://www.procustodibus.com/blog/2021/03/wireguard-allowedips-calculator/.
@@ -59,12 +59,10 @@ services:
       - "51820:51820/udp"   # Puerto UDP del servicio.
       - "51821:51821/tcp"   # Puerto TCP Administracion Web.
     dns:
-      - 172.17.0.20  # Direccion IP WireGuard.
-      - 172.17.0.10  # Direccion IP PiHole-UnboundDNS.
+      - 172.17.0.4  # Direccion IP WireGuard.
+      - 172.17.0.3  # Direccion IP PiHole-UnboundDNS.
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
     restart: unless-stopped
     network_mode: bridge
-        ipv4_address: 172.17.0.20    
-
