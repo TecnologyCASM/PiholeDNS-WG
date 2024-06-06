@@ -97,17 +97,19 @@ sudo nano .env
 docker compose up -d && docker ps
 ```
 # Contenedor PiHole:
-1) Despues de subir los contenedores, debemos entrar a la web de Pihole para poder visualiar e iniciar las configuraciones de lugar http://X.X.X.X:8080/admin/login.php
+1) Despues de subir los contenedores, debemos entrar a la web de Pihole para poder visualiar e iniciar las configuraciones de lugar http://X.X.X.X:port/admin/login.php
 
 ![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/267d2e41-1c64-46f0-940f-315f796ead7c)
 
+2) Despues de iniciar sesion, nos dirigimos al apartado `Adlist`:
+![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/489423e0-2434-436d-a21a-4ffabee21137)
+en este apartado debemos agregar la siguiente url de IP que se encuentran en blacklist [PiholeB-locklist](https://github.com/Pyenb/Pi-hole-blocklist)
 
+# Contenedor WireGuward:
+1) Este es el segundo contenedor que trabaja el servicio de VPN:
+![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/a5541875-34bb-494e-bd0f-415491d2052c)
 
-2) dfafa
-3) fafaf
-4) 
-
-# Listas de Bloqueo de PiHole: 
-[PiholeB-locklist](https://github.com/Pyenb/Pi-hole-blocklist)
+2) Una vez iniciado session, podemos agregar los perfiles de los clientes que necesitan conectarse via VPN:
+![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/4680cba7-5aed-48b0-8a31-b5fd039142fd)
 
 MUCHAS GRACIAS POR UTILIZAR MI APORTE A LA COMUNIDAD...
