@@ -96,7 +96,7 @@ sudo nano .env
 ```shell
 docker compose up -d && docker ps
 ```
-# Listas de Bloqueo de PiHole:
+# Listas de Bloqueo de PiHole: [PiholeB-locklist](https://github.com/Pyenb/Pi-hole-blocklist)
 ```shell
 https://github.com/Pyenb/Pi-hole-blocklist
 ```
