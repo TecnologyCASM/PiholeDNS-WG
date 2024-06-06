@@ -96,6 +96,17 @@ sudo nano .env
 ```shell
 docker compose up -d && docker ps
 ```
+# Contenedor PiHole:
+1) Despues de subir los contenedores, debemos entrar a la web de Pihole para poder visualiar e iniciar las configuraciones de lugar http://X.X.X.X:8080/admin/login.php
+![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/c1c79e5a-3bfb-4958-b387-e165263db78b)
+![image](https://github.com/TecnologyCASM/PiholeDNS-WG/assets/107158068/267d2e41-1c64-46f0-940f-315f796ead7c)
+
+
+
+2) dfafa
+3) fafaf
+4) 
+
 # Listas de Bloqueo de PiHole: 
 [PiholeB-locklist](https://github.com/Pyenb/Pi-hole-blocklist)
 
