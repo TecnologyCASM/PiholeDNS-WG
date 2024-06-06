@@ -1,5 +1,5 @@
 version: '3.0'
-
+# Servicio Pihole y Unbound DNS en un solo contenedor:
 volumes:
   etc_pihole-unbound:
   etc_pihole_dnsmasq-unbound:
@@ -18,7 +18,7 @@ services:
     environment:
       - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
       - TZ=${TZ:-UTC}
-      - WEBPASSWORD=${WEBPASSWORD}
+      - WEBPASSWORD=${PIHOLE_PASSWORD}
       - WEBTHEME=${WEBTHEME:-default-light}
       - REV_SERVER=${REV_SERVER:-false}
       - REV_SERVER_TARGET=${REV_SERVER_TARGET}
@@ -31,7 +31,9 @@ services:
       - etc_pihole-unbound:/etc/pihole:rw
       - etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
     restart: unless-stopped
-    network_mode: bridge
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.10 # Dirección IP estática para Pi-hole & Unbound
 # ============================================================================= #
   wg-easy:
     depends_on: [pihole]
@@ -42,10 +44,9 @@ services:
       - NET_ADMIN # Recomendado pero no obligatorio (DHCP necesita NET_ADMIN).
       - SYS_MODULE
     environment:
-      - WG_LOCAL_IPV4=${WG_LOCAL_IPV4}
       - LANG=es
       - WG_HOST=${WG_HOST} #Dominio Dinamico con IP Publica del ISP.
-      - PASSWORD=${WEBPASSWORD}
+      - PASSWORD=${WG_PASSWORD}
       - PORT=51821  # Puerto TCP Administracion Web del Servicio.
       - WG_PORT=51820   # Puerto UDP del Servicio.
       - WG_DEFAULT_DNS=${FTLCONF_LOCAL_IPV4} # Direccion IP Dns PiHole y Unbound DNS.
@@ -57,10 +58,21 @@ services:
       - "51820:51820/udp"   # Puerto UDP del servicio.
       - "51821:51821/tcp"   # Puerto TCP Administracion Web.
     dns:
-      - 172.17.0.4  # Direccion IP WireGuard.
-      - 172.17.0.3  # Direccion IP Pihole-UnboundDNS.
+      - 10.7.1.20  # Direccion IP WireGuard.
+      - 10.7.1.10  # Direccion IP Pihole-UnboundDNS.
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
     restart: unless-stopped
-    network_mode: bridge
+    networks:
+      my_network:
+        ipv4_address: 10.7.1.20 # Dirección IP estática para wg-easy
+# ============================================================================= #
+networks:
+  my_network:
+    name: PiholeDNS-WG
+    driver: bridge
+    ipam:
+     config:
+        - subnet: 10.7.1.0/24   # Segmento de Red.
+          gateway: 10.7.1.1
